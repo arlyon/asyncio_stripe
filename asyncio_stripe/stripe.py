@@ -57,6 +57,7 @@ class Charge(object):
     amount_refunded = attr.ib()
     application = attr.ib(metadata={'expandable': True})
     application_fee = attr.ib(metadata={'expandable': True})
+    application_fee_amount = attr.ib()
     balance_transaction = attr.ib(metadata={'expandable': True})
     captured = attr.ib()
     created = attr.ib()
@@ -75,8 +76,10 @@ class Charge(object):
     order = attr.ib(metadata={'expandable': True})
     outcome = attr.ib()
     paid = attr.ib()
+    payment_intent = attr.ib()
     receipt_email = attr.ib()
     receipt_number = attr.ib()
+    receipt_url = attr.ib()
     refunded = attr.ib()
     refunds = attr.ib()
     review = attr.ib(metadata={'expandable': True})
@@ -85,6 +88,7 @@ class Charge(object):
     source_transfer = attr.ib(metadata={'expandable': True})
     statement_descriptor = attr.ib()
     status = attr.ib()
+    transfer_data = attr.ib()
     transfer_group = attr.ib()
 
     # Only when created with destination set
