@@ -107,10 +107,14 @@ class Customer(object):
     discount = attr.ib()
     email = attr.ib()
     invoice_prefix = attr.ib()
+    invoice_settings = attr.ib()
     livemode = attr.ib()
     metadata = attr.ib()
     shipping = attr.ib()
     sources = attr.ib()
+    
+    tax_info = attr.ib()
+    tax_info_verification = attr.ib()
 
     # Not returned when customer has no subscriptions
     subscriptions = attr.ib(default=attr.Factory(list))
